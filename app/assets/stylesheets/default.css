@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+strong{
+  color: black;
+}
+
+li{
+  margin: 0 30px;
+}
+
+.flash{
+  color: #33CC99;
+}
+
+.alert{
+  margin: 5px 0;
+  color: #993333;
+}
+
+.alert-title{
+  color: white;
+  background: #993333;
+}
+
+.header{
+  background: black;
+  color: white;
+  margin: 0 auto;
+}
+
+.header a{
+  color: white;
+}
+
+.cover{
+  text-align: center;
+}
+
+.text{
+  text-align: left;
+}
+
+.btn-login{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 205px;
+  color: #444444;
+  background: #03A9F4;
+  border-radius: 4px;
+}
+
+.btn-signup{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 200px;
+  color: #444444;
+  background: #32CD32;
+  border-radius: 4px;
+}
+
+.btn-login-new{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  color: #444444;
+  background: #03A9F4;
+  border-radius: 4px;
+}
+
+.btn-signup-new{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  color: #444444;
+  background: #32CD32;
+  border-radius: 4px;
+}
+
+.btn-crbook{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 40px;
+  color: #FFF;
+  background: #03A9F4;
+  border-radius: 4px;
+}
+
+.btn-prof{
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 70px;
+  color: #444444;
+  background: #FFF;
+  border: solid;
+  border-radius: 4px;
+}
+
+.nav-link{
+  color: black;
+}
+
+.btn-delete{
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  color: #444444;
+  background: red;
+  border-radius: 4px;
+}
+
+.btn-edit{
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  color: #444444;
+  background: green;
+  border-radius: 4px;
+}

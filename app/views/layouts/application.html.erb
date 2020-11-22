@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Bookers2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-main navbar-shadow">
+        <div class="container relative">
+          <div class="navbar-header">
+            <h4>Bookers</h4>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="slidemenu">
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+                <li class="">
+                  <%= link_to 'Home', user_path(current_user.id), class:"glyphicon glyphicon-home home" %>
+                </li>
+                <li class="">
+                  <%= link_to 'Users', users_path, class:"glyphicon glyphicon-user usres" %>
+                </li>
+                <li class="">
+                  <%= link_to 'books', books_path, class:"glyphicon glyphicon-book books" %>
+                </li>
+                <li class="">
+                  <%= link_to 'logout'.downcase, destroy_user_session_path, class:"glyphicon glyphicon-log-out logout", method: :delete %>
+                </li>
+              <% else %>
+                <li><a class="glyphicon glyphicon-home home" href="/"> Home</a></li>
+                <li><a class="glyphicon glyphicon-link about" href="/home/about"> About</a></li>
+                <li><a class="glyphicon glyphicon-edit sign_up" href="/users/sign_up"> Sign up</a></li>
+                <li><a class="glyphicon glyphicon-log-in sign_in" href="/users/sign_in"> login</a></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  <%= yield %>
+
+<footer>
+  <div class='container'>
+  	<div class='row'>
+    	<div class='col-xs-3 col-xs-offset-9'>
+    		<p>CopyRight Infratop.inc</p>
+    	</div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

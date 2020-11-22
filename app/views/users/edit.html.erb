@@ -1,0 +1,32 @@
+<div class='container'>
+<h2 >User info</h2>
+<% if @user.errors.any? %>
+  <div class="alert">
+    <div class="alert-title">
+      <%= @user.errors.count %> errors prohibited this obj from being saved:
+    </div>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </div>
+<% end %>
+<div class="form-body">
+<%= form_with model:@user, local:true do |f| %>
+  <div class="form-group has-icon"><p>Name</p>
+    <label class="control-label sr-only" for="inputEmail">Name</label>
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <div class="form-group has-icon">
+    <div class="user-edit-image"><p>Image</p>
+      <%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", size:"100x100"%>
+    </div>
+    <label class="control-label sr-only" for="inputEmail">ProfileImage</label>
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+  </div>
+  <div class="form-group has-icon"><p>Introduction</p>
+    <label class="control-label sr-only" for="inputEmail">Introduction</label>
+      <%= f.text_field :introduction, autofocus: true %>
+  </div>
+    <%= f.submit "Update User" %>
+  <% end %>
+  </div>

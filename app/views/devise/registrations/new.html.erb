@@ -1,0 +1,24 @@
+<div class='container'>
+  <h2>Sign up</h2>
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="form-group has-icon">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, placeholder:"Name"%>
+      </div>
+      <div class="form-group has-icon">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, placeholder:"email"%>
+      </div>
+      <div class="form-group has-icon">
+        <%= f.label :Password %><em>(6 characters minimum)</em><br />
+        <%= f.password_field :password, autocomplete: "off", placeholder:"password" %>
+      </div>
+      <div class="form-group has-icon">
+        <%= f.label :Password %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"パスワード確認" %>
+      </div>
+        <%= f.submit "Sign up", class:"btn-signup-new" %><br />
+        <a href="/users/sign_in">Log in</a>
+    <% end %>
+  </div>
