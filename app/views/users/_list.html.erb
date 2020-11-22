@@ -7,11 +7,8 @@
     	    <th><%= current_user.name %></th>
         </tr>
         <tr>
-    	    <th>introduction</th>
-    	    <tr>
-    	     <th>introduction</th>
-    	     <th><%= @user.introduction %></th>
-        </tr>
+    	   <th>introduction</th>
+    	   <th><%= current_user.introduction %></th>
         </tr>
         <th>
           <p><%= link_to '', edit_user_path(current_user.id), class:"btn-prof glyphicon glyphicon-wrench" %></p>
