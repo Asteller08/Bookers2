@@ -18,8 +18,8 @@ class BooksController < UsersController
   end
 
   def show
-    @book = Book.find(params[:id])
-
+    @books = Book.find(params[:id])
+    @book = Book.new
   end
 
   def update
@@ -42,7 +42,6 @@ class BooksController < UsersController
       redirect_to book_path(@book.id)
     else
       @books = Book.all
-      flash[:notice] = "error"
       render :index
     end
   end
